@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ public class MyTabWidget extends LinearLayout {
 
 	private static final String TAG = "MyTabWidget";
 	private int[] mDrawableIds = new int[] { R.drawable.bg_home,
-			R.drawable.bg_category,R.drawable.bg_add, R.drawable.bg_collect,
+			R.drawable.bg_category,R.drawable.bg_collect,
 			R.drawable.bg_setting };
 	// 存放底部菜单的各个文字CheckedTextView
 	private List<CheckedTextView> mCheckedList = new ArrayList<CheckedTextView>();
@@ -94,57 +95,65 @@ public class MyTabWidget extends LinearLayout {
 		for (int i = 0; i < size; i++) {
 
 			final int index = i;
+				// 每个tab对应的layout
+				final View view = inflater.inflate(R.layout.tab_item, null);
 
-			// 每个tab对应的layout
-			final View view = inflater.inflate(R.layout.tab_item, null);
+				final CheckedTextView itemName = (CheckedTextView) view
+						.findViewById(R.id.item_name);
+				itemName.setCompoundDrawablesWithIntrinsicBounds(null, context
+						.getResources().getDrawable(mDrawableIds[i]), null,
+						null);
+				itemName.setText(mLabels[i]);
 
-			final CheckedTextView itemName = (CheckedTextView) view
-					.findViewById(R.id.item_name);
-			itemName.setCompoundDrawablesWithIntrinsicBounds(null, context
-					.getResources().getDrawable(mDrawableIds[i]), null, null);
-			itemName.setText(mLabels[i]);
+				// 指示点ImageView，如有版本更新需要显示
+				final ImageView indicateImg = (ImageView) view
+						.findViewById(R.id.indicate_img);
+				this.addView(view, params);
 
-			// 指示点ImageView，如有版本更新需要显示
-			final ImageView indicateImg = (ImageView) view
-					.findViewById(R.id.indicate_img);
-			this.addView(view, params);
+				// CheckedTextView设置索引作为tag，以便后续更改颜色、图片等
+				itemName.setTag(index);
 
-			// CheckedTextView设置索引作为tag，以便后续更改颜色、图片等
-			itemName.setTag(index);
+				// 将CheckedTextView添加到list中，便于操作
+				mCheckedList.add(itemName);
+				// 将指示图片加到list，便于控制显示隐藏
+				mIndicateImgs.add(indicateImg);
+				// 将各个tab的View添加到list
+				mViewList.add(view);
 
-			// 将CheckedTextView添加到list中，便于操作
-			mCheckedList.add(itemName);
-			// 将指示图片加到list，便于控制显示隐藏
-			mIndicateImgs.add(indicateImg);
-			// 将各个tab的View添加到list
-			mViewList.add(view);
+				view.setOnClickListener(new OnClickListener() {
 
-			view.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
 
-				@Override
-				public void onClick(View v) {
+						// 设置底部图片和文字的显示
+						setTabsDisplay(context, index);
 
-					// 设置底部图片和文字的显示
-					setTabsDisplay(context, index);
-
-					if (null != mTabListener) {
-						// tab项被选中的回调事件
-						mTabListener.onTabSelected(index);
+						if (null != mTabListener) {
+							// tab项被选中的回调事件
+							mTabListener.onTabSelected(index);
+						}
 					}
+				});
+
+				// 初始化 底部菜单选中状态,默认第一个选中
+				if (i == 0) {
+					itemName.setChecked(true);
+					itemName.setTextColor(Color.rgb(247, 88, 123));
+					view.setBackgroundColor(Color.rgb(240, 241, 242));
+				} else {
+					itemName.setChecked(false);
+					itemName.setTextColor(Color.rgb(19, 12, 14));
+					view.setBackgroundColor(Color.rgb(250, 250, 250));
 				}
-			});
-
-			// 初始化 底部菜单选中状态,默认第一个选中
-			if (i == 0) {
-				itemName.setChecked(true);
-				itemName.setTextColor(Color.rgb(247, 88, 123));
-				view.setBackgroundColor(Color.rgb(240, 241, 242));
-			} else {
-				itemName.setChecked(false);
-				itemName.setTextColor(Color.rgb(19, 12, 14));
-				view.setBackgroundColor(Color.rgb(250, 250, 250));
-			}
-
+				
+				//创建中间的添加按钮
+				if(i ==1){
+					LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(
+							60,60);
+					params2.gravity = Gravity.CENTER;
+					final View add_view = inflater.inflate(R.layout.tab_item_add, null);
+					this.addView(add_view, params2);
+				}
 		}
 	}
 
