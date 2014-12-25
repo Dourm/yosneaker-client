@@ -23,6 +23,7 @@
     <!-- 设置 -->
     <string name="recommend_to_weixin_friend">推荐给微信好友</string>
     <string name="feedback">意见反馈</string>
+    <string name="article_detail">测评详情</string>
     <string name="about_us">关于我们</string>
     <string name="app_recommend">应用推荐</string>
     <string name="clear_cache">清除缓存</string>
