@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rainy.yosneaker.client.R;
-import com.rainy.yosneaker.client.utils.CommonUtils;
 import com.rainy.yosneaker.client.view.MyScrollView;
 import com.rainy.yosneaker.client.view.MyScrollView.OnScrollListener;
 

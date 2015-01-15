@@ -29,7 +29,7 @@
     <string name="clear_cache">清除缓存</string>
     <string name="mobile_number">手机号</string>
     <string name="mobile_number_hint">方便我们尽快反馈</string>
-    <string name="content_edit_hint">欢迎在这儿发表宝贵的意见哦~</string>
+    <string name="content_edit_hint">来说说看你对它的看法吧！~</string>
 	
     
         <string name="xlistview_header_hint_normal">下拉刷新</string>
