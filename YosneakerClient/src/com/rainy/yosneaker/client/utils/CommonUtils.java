@@ -20,7 +20,7 @@ import android.view.inputmethod.InputMethodManager;
 /**
  * 通用工具类
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class CommonUtils {

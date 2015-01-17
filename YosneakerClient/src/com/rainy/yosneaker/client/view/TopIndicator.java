@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
 /**
  * ¶¥²¿indicator
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class TopIndicator extends LinearLayout {

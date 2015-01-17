@@ -17,7 +17,7 @@ import android.support.v4.app.FragmentTransaction;
 /**
  * µ¼º½Ò³
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class MainActivity extends FragmentActivity implements

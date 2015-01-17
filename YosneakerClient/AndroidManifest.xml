@@ -16,7 +16,7 @@
 
         <!-- 首页导航页 -->
         <activity
-            android:name="com.rainy.yosneaker.client.activity.ArticleItemActivity"
+            android:name="com.rainy.yosneaker.client.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -38,6 +38,22 @@
         <!-- 详情页 -->
         <activity
             android:name="com.rainy.yosneaker.client.activity.ArticleDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        
+        
+        <!-- 帖子标题页 -->
+        <activity
+            android:name="com.rainy.yosneaker.client.activity.ArticleTitleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        
+        
+        <!-- 测评项页 -->
+        <activity
+            android:name="com.rainy.yosneaker.client.activity.ArticleItemActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>

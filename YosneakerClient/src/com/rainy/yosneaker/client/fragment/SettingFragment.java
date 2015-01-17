@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 /**
  * Ê×Ò³ ÉèÖÃ fragment
- * @author dewyze
+ * @author rainy
  *
  */
 public class SettingFragment extends BaseFragment implements OnClickListener {

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_commond_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常用的测评项标题:" />
+		
+        <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        
+        <TableRow 
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/item_title_aspect"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:text="外观" />
+
+            <Button
+                android:id="@+id/item_title_protective"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:text="保护性" />
+
+            <Button
+                android:id="@+id/item_title_weight"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="0dip"
+                android:layout_weight="1"
+                android:text="重量" />
+
+        </TableRow> 
+        
+        <TableRow 
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/item_title_holding"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:text="抓地" />
+
+            <Button
+                android:id="@+id/item_title_comfort"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:text="舒适度" />
+
+            <Button
+                android:id="@+id/item_title_technology"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="0dip"
+                android:layout_weight="1"
+                android:text="科技" />
+
+        </TableRow> 
+        
+        <TableRow 
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/item_title_wear"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:text="耐磨" />
+
+            <Button
+                android:id="@+id/item_title_cost_performance"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:text="性价比" />
+
+            <Button
+                android:id="@+id/item_title_xxx"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="0dip"
+                android:layout_weight="1"
+                android:text="装X度" />
+
+        </TableRow> 
+    </TableLayout>
+</LinearLayout>

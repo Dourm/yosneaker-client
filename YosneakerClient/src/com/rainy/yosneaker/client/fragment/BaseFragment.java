@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 /**
  * Fragment»ùÀà
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public abstract class BaseFragment extends Fragment {

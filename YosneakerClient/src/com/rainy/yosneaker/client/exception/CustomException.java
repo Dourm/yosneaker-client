@@ -2,7 +2,7 @@ package com.rainy.yosneaker.client.exception;
 
 /**
  * “Ï≥£¿‡
- * @author dewyze
+ * @author rainy
  *
  */
 public class CustomException extends Exception {

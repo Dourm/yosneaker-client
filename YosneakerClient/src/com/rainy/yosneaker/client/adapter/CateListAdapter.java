@@ -13,7 +13,7 @@ import android.widget.CheckedTextView;
 /**
  * ·ÖÀà
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class CateListAdapter extends BaseAdapter {

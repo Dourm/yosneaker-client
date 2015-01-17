@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.rainy.yosneaker.client.R;
+import com.rainy.yosneaker.client.activity.ArticleDetailActivity;
+import com.rainy.yosneaker.client.activity.ArticleTitleActivity;
 import com.rainy.yosneaker.client.exception.CustomException;
+import com.rainy.yosneaker.client.utils.CommonUtils;
 import com.rainy.yosneaker.client.utils.LogUtils;
 
 import android.content.Context;
@@ -22,7 +25,7 @@ import android.widget.LinearLayout;
 /**
  * µ×²¿µ¼º½
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class MyTabWidget extends LinearLayout {
@@ -152,6 +155,14 @@ public class MyTabWidget extends LinearLayout {
 							60,60);
 					params2.gravity = Gravity.CENTER;
 					final View add_view = inflater.inflate(R.layout.tab_item_add, null);
+					
+					add_view.setOnClickListener(new View.OnClickListener() {
+						
+						@Override
+						public void onClick(View v) {
+							CommonUtils.launchActivity(getContext(), ArticleTitleActivity.class);
+						}
+					});
 					this.addView(add_view, params2);
 				}
 		}

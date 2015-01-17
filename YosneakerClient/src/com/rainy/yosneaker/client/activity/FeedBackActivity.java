@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 /**
  * 意见反馈页面
- * @author dewyze
+ * @author rainy
  *
  */
 public class FeedBackActivity extends Activity implements OnClickListener {

@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 
 /**
  * 点击不可透过的RelativeLayout
- * @author dewyze
+ * @author rainy
  *
  */
 public class CustomRelativeLayout extends RelativeLayout {

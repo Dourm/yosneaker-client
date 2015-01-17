@@ -14,7 +14,7 @@ import android.widget.ImageView;
 /**
  * ¶¯»­fragment
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class AnimFragment extends Fragment implements OnClickListener {

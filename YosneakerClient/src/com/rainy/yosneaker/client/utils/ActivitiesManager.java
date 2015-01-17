@@ -8,7 +8,7 @@ import android.app.Activity;
 /**
  * activity∂—’ªπ‹¿Ì
  * 
- * @author dewyze
+ * @author rainy
  * 
  */
 public class ActivitiesManager {
